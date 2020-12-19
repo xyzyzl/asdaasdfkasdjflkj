@@ -1,0 +1,390 @@
+/**
+ * Nord Ambiance
+ * By T.H. Kim
+ * Made uglier by Welp...
+ */
+ 
+/* Import Font */
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap");
+ 
+/* Background Colors */
+body     	{background-color: #2e3440;}
+div#header {background-color: #2e3440;}
+div#wrapper {background-color: #2e3440;}
+ 
+div#navigation_box {background-color: #3B4252;}
+div#navigation_box div a:hover {background-color: #2e3440;}
+ 
+div.entrywrap {background-color: #3B4252;}
+div.comment {background-color: #3B4252;}
+#side {background-color: #3B4252;}
+li.row1, li.row2{background-color: #3B4252;}
+li.row1:hover, li.row2:hover {background-color: #2e3440}
+#side > div:not(#shouts-widget):hover {background-color: #2e3440;}
+form#postform fieldset {background-color: #E5E9F0;}
+div#tabs {background-color: #e5e9f0;}
+div.entry > h2 > a {background-color: #e5e9f0;}
+div.bbcode_quote{background-color: #e5e9f0;}
+div.cmty-hide-content {background-color: #e5e9f0;}
+div.cmty-post-preview {background-color: #3B4252;}
+ 
+/* Text Colors */
+body {color: #8fbcbb;}
+div#header {color: #5e81ac !important;}
+div#header h1 {color: #5e81ac !important;}
+h2 {color: #5e81ac;}
+div#navigation_box div a {color: #d8dee9!important;}
+.entry h1 a {color: #d8dee9;}
+#main h1 {color: #d8dee9;}
+li.row1:hover, li.row2:hover {color: #5e81ac !important;}
+#side > div:not(#shouts-widget):hover {color: #5e81ac !important;}
+.entry h2 a {color: #5e81ac;}
+a:hover {color: #81a1c1 !important;}
+ div.total-posts , div.total-posts a{color: #5e81ac;}
+form#postform h3 {color: #5e81ac;}
+
+a:link {
+    color: #eceff4; 
+    background-color: transparent; 
+    text-decoration: none;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+a:visited {
+    color: #d8dee9;
+    background-color: transparent;
+    text-decoration: none;
+}
+ 
+/* IF THEME HAS DARK BACKGROUND, USE THIS, OTHERWISE, DON'T*/
+.latexcenter, .latex {
+filter: invert(1);
+}
+div.bbcode_quote .latexcenter, div.bbcode_quote .latex, div.cmty-hide-content .latexcenter, div.cmty-hide-content .latex {
+filter: none;
+}
+
+@font-face {
+	font-family: 'Baloo2';
+	font-style: normal;
+	font-weight: 200;
+	font-display: swap;
+	src: url(https://fonts.gstatic.com/s/baloo2/v1/wXKrE3kTposypRyd51jcAA.woff2) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Body */
+body {
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-family:  'Baloo2', sans-serif;
+}
+ 
+/* Header */
+div#header {
+	font-family: 'Baloo2', sans-serif;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	height: 70px;
+	border: none;
+	left: 0px;
+	height: 100px;
+	z-index: 50;
+}
+ 
+div#header h1 {
+    	margin-top: 0px;
+    	margin-bottom: 0px;
+    	text-align: left;
+ 
+    	height: 70px;
+    	line-height: 2;
+    	font-size: 36px;
+    	/* Fix to Align Header with Wrapper*/
+    	width: 80%;
+    	margin-left: auto;
+    	margin-right: auto;
+}
+
+/*#header > a:nth-child(1) > h1:nth-child(1)::after {
+  font-size:36px;
+  content:"\54\68\65\20\54\6F\6E\69\67\68\74\20\53\68\6F\77\20\53\74\61\72\72\69\6E\67\20\43\61\6E\74\6F\6E\4D\61\74\68\47\75\79"
+}*/
+
+h2 {
+	font-family:  'Baloo2', sans-serif;
+}
+/* Navigation Bar */
+div#navigation_box {
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	margin-bottom: 40px;
+	box-shadow: 0px 0px 5px 0px black;
+	border: none;
+	padding: 0px;
+	position: fixed;
+	top: 100px;
+	width: 100%;
+	z-index: 51;
+	height: 30px;
+}
+ 
+div#navigation_box:hover {
+	box-shadow: 0px 0px 10px 0px black;
+}
+
+ 
+div#navigation_box div {
+	font-size: 1px;
+	height: 30px;
+	color: transparent;
+}
+ 
+div#navigation_box div a {
+	display: inline-block;
+	text-decoration: none;
+	font-size: 15px;
+	font-family: 'Baloo2', sans-serif;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	height: 30px;
+}
+ 
+div.message {
+overflow: visible;
+}
+ 
+div#navigation_box div a:hover {
+	box-shadow: 0px 0px 20px 0px black;
+}
+ 
+/* Wrapper */
+#wrapper {
+	position: absolute;
+	width: 83%;
+	min-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+ 
+	padding-left: 0px;
+	padding-right: 30px;
+	box-shadow: 0px 0px 10px 0px black;
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	top: 170px;
+	left: 7%;
+	border: none;
+	background-image: none;
+}
+#wrapper:hover {
+	box-shadow: 0px 0px 20px 0px black;
+}
+ 
+/* Main */
+#main {
+	width: 70%;
+	float:right;
+}
+div.entry {
+	border: none;
+}
+ 
+ 
+div.entrywrap {
+	border: none;
+	border-radius: 10px;
+	font-size: 12pt;
+}
+ 
+.comment {
+	border: none;
+	border-radius: 10px;
+	font-size: 10pt;
+}
+div.comment {
+	border: none;
+}
+ 
+/* Side */
+#side {
+	width: 27%;
+	float: left;
+	padding-left:0px;
+	padding-right:0px;
+	padding-top: 0px;
+	margin-top: 0px;
+}
+ 
+ 
+#shout_post fieldset{
+	border: none;
+	padding-left: 0px;
+	padding-right:0px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+div.widget, div.user_menu {
+	padding: 5px !important;
+}
+ 
+div#shouts-widget {
+	padding: 0px !important;
+	padding-top: 5px !important;
+	padding-bottom: 5px !important;
+}
+div#shouts-widget div.widget-header {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+ 
+li.row1, li.row2 {
+	padding: 5px !important;
+	border-top:2px solid #4f4f4f;
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+}
+ 
+li.row1 p, li.row2 p {
+	margin-top: 0px;
+}
+li.row1 p.shout_footer, li.row2 p.shout_footer {
+	margin-top: 0px !important;
+	margin-bottom: 0px !important;
+}
+.inputbox
+{
+	width: 95%;
+	box-shadow: 0px 0px 20px 0px lightgrey inset;
+	border-radius: 5px;
+}
+#message {
+	margin-left: 1%;
+}
+ 
+#side > div:not(#shouts-widget) {
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+}
+ 
+div.widget {
+	margin-bottom: 0px !important;
+	padding-bottom: 20px !important;
+}
+/* Links */
+a{
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+}
+ 
+ 
+ 
+/* Post New Entry */
+form#postform {
+	position: relative;
+	width: 140%;
+	left: -40%;
+}
+ 
+form#postform h3 {
+	font-size: 16pt;
+}
+form#postform fieldset {
+	margin: 0px;
+	border: none;
+}
+form#postform > fieldset.fields1 {
+	border-top-left-radius: 12px;
+	border-top-right-radius: 12px;
+}
+ 
+div#tabs ul {
+	margin: 0px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+ 
+/* Testing Flexbox to fix sidebar height */
+#content {
+	display: flexbox; /* IE 10*/
+	display: flex;
+	align-items: stretch;
+	justify-content: space-between;
+}
+ 
+#side {
+	order: 1;
+}
+ 
+#main {
+	order: 3;
+}
+ 
+#content > div.clear {
+	order: 2
+}
+ 
+/* Blog Errors*/
+div#blog-errors {
+	z-index: 1000000000000000000;
+	position: absolute !important;
+}
+ 
+/* Other Stuff */
+div.entry > h2 > a > img {
+	display: none;
+}
+div.entry > h2 > a {
+	width: 12px;
+	height: 12px;
+	border-radius: 6px;
+	display: inline-block;
+	margin-right: 2px;
+}
+ 
+/* Codes and Quotes*/
+div.codetitle, div.quotetitle {
+	background: #073642;
+	border-top-left-radius: 5px;
+	border-top-right-radius:5px;
+	border: 2px solid  #073642;
+}
+div.codecontent > div {
+	font-family: Consolas, monospace !important;
+}
+div.codecontent > div > ol , div.quotecontent{
+	margin-top:0px;
+	margin-bottom:0px;
+	border: 2px solid  #073642;
+}
+ 
+fieldset {
+  border:none;
+}
+
+.cmty-post-edited .cmty-post-edit-info{
+display: none;
